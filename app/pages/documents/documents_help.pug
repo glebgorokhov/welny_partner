@@ -1,0 +1,11 @@
+extends ../../layouts/default_two-col
+
+block head
+  - var pageTitle = projectName + ' | Помощь'
+  - var activeMenuPoint = 6
+
+block sidebar
+  +list(getData('lists').help)._mobile-nopadding
+
+block content
+  +document('Руководство Партнера')

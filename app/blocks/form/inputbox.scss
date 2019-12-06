@@ -1,13 +1,250 @@
 .inputbox {
-  display: block;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  $b: &;
+
+  & + & {
+    @include rule(margin-top, (xl: 46px, lg: 6px));
+
+    &_button {
+      @include rule(margin-top, (xl: 50px, lg: 18px));
+      @include rule(min-width, (lg: 165px));
+    }
+  }
+
+  &_button {
+    font-size: 0;
+    text-align: center;
+
+    .button {
+      @include rule(width, (xl: 100%, lg: auto));
+    }
+  }
 
   &__label {
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1;
+    @include rule(margin-bottom, (xl: 11px, lg: 7px));
+    @include rule(font-size, (xl: 18px, lg: 16px));
+    @include rule(line-height, (xl: 25px, lg: 20px));
+
+    letter-spacing: -0.02em;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
   }
 
   &__wrapper {
     position: relative;
+  }
+
+  &__calendar-icon {
+    width: 18px;
+    height: 20px;
+    position: absolute;
+    right: 13px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    fill: $color-main;
+    transition: opacity $ease-main;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  &__text {
+    @include rule(font-size, (xl: 18px, lg: 16px));
+    @include rule(line-height, (xl: 25px, lg: 20px));
+
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 8px, lg: 10px));
+    }
+
+    a, span {
+      color: $color-main;
+    }
+
+    a {
+      transition: opacity $ease-main;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+
+    &_small {
+      @include rule(font-size, (xl: 16px, lg: 14px));
+      @include rule(margin-top, (xl: 7px, lg: 14px));
+
+      line-height: 20px;
+      color: $color-grey;
+
+      br {
+        @include rule(display, (lg: none));
+      }
+    }
+  }
+
+  &__error-text {
+    @include rule(font-size, (xl: 14px, lg: 16px));
+    @include rule(line-height, (xl: 25px, lg: 20px));
+
+    color: $color-main;
+    display: none;
+
+    .has-error & {
+      display: block;
+    }
+  }
+
+  &__sex {
+    display: flex;
+    align-items: center;
+
+    @include rule(height, (xl: 86px, lg: 64px));
+
+    #{$b}__label {
+      @include rule(width, (xl: 90px, lg: 74px));
+
+      box-sizing: border-box;
+      padding-right: 20px;
+      margin-bottom: 0;
+      flex-grow: 0;
+    }
+  }
+
+  &__sex-items {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: -30px;
+
+    .checkradio {
+      margin-right: 30px;
+    }
+  }
+
+  &__tooltip-wrapper {
+    @include rule(margin-left, (xl: 10px, lg: 6px));
+    @include rule(margin-bottom, (xl: 5px, lg: 2px));
+
+    position: relative;
+    font-size: 0;
+    display: block;
+  }
+
+  &__tooltip-button {
+    width: 17px;
+    height: 17px;
+    fill: $color-grey;
+    transition: fill $ease-main;
+    display: block;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      fill: $color-main;
+    }
+  }
+
+  &__tooltip {
+    @include rule(padding, (xl: 37px 30px, lg: 27px 25px 27px 30px));
+    @include rule(position, (xl: absolute, lg: fixed));
+    @include rule(left, (xl: -41px, lg: 0));
+    @include rule(top, (xl: 100%, lg: auto));
+    @include rule(width, (xl: 350px, lg: 100%));
+    @include rule(bottom, (lg: 0));
+    @include rule(margin-top, (xl: 25px, lg: 0));
+
+    display: block;
+    background: $color-grey-dark;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    box-sizing: border-box;
+    z-index: 10;
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+    pointer-events: none;
+    transition: opacity $ease-main, transform $ease-main;
+
+    #{$b}__tooltip-button:hover + & {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 16.5px 17px 16.5px;
+      border-color: transparent transparent $color-grey-dark transparent;
+      position: absolute;
+      left: 33px;
+      bottom: 100%;
+
+      @include rule(display, (lg: none));
+    }
+  }
+
+  &__checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include rule(margin, (xl: -20px -19px 0, lg: -10px 0 0));
+
+    .checkradio {
+      box-sizing: border-box;
+
+      @include rule(padding, (xl: 20px 19px 0, lg: 10px 0 0));
+      @include rule(width, (xl: 33.3333%, xlg: 50%, lg: 100%));
+    }
+  }
+
+  &__checkable {
+    margin: 0 -15px;
+
+    @include rule(display, (xl: flex, lg: block));
+    @include rule(padding-top, (lg: 17px));
+
+    .checkradio {
+      padding: 0 15px;
+      box-sizing: border-box;
+      align-self: flex-start;
+
+      @include rule(width, (xl: 33.33333%, lg: 100%));
+    }
+
+    .inputbox__right {
+      @include rule(width, (xl: 66.66666%, lg: 100%));
+      @include rule(margin-top, (xl: -37px, lg: 0));
+
+      display: flex;
+      flex-wrap: wrap;
+
+      &.is-hidden {
+        opacity: 0;
+        height: 1px;
+        overflow: hidden;
+        margin: 0;
+      }
+    }
+  }
+
+  &__input-small-col {
+    @include rule(width, (xl: 50%, lg: 100%));
+    @include rule(padding, (xl: 37px 15px 0, lg: 20px 15px 0));
+
+    box-sizing: border-box;
   }
 }

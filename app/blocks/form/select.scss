@@ -6,8 +6,16 @@
 
 .select {
   appearance: none;
+  background-image: url('../images/select_arrow_main.svg');
+  background-position: right 21px center;
+  background-repeat: no-repeat;
+  padding-right: 50px;
 
   @extend .input;
+
+  &_big {
+    height: 50px;
+  }
 }
 
 .choices {

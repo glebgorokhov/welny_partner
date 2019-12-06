@@ -1,0 +1,8 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = projectName + ' | Редактирование партнера'
+  - var activeMenuPoint = 1
+
+block content
+  +edit(getData('edit_partner'))

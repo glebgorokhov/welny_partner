@@ -1,0 +1,23 @@
+mixin list(data)
+  +b.list&attributes(attributes)
+    each item in data
+      +e.A.link(href=item.link, class=item.class)
+        if item.tick
+          +icon('tick').__tick
+        span!= item.text
+
+mixin ui-kit-list()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент list
+      +ui-path
+        p Компонент: components/list/list
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +list(getData('lists').names)
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

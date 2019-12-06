@@ -1,0 +1,48 @@
+mixin login(sent)
+  +b.SECTION.login&attributes(attributes)
+    +e.header
+      .container
+        +e.H1.title Велни.Партнер
+        +e.P.subtitle Войдите в аккаунт
+
+    +e.content
+      +e.wrapper
+        +e.logo
+          img(src="assets/images/logo.svg" alt="Welny")
+
+        +e.FORM.form(action="#" method="post")
+          if sent
+            +inputbox
+              +e.P.text Сообщение отправлено на номер <span>79177069050</span>
+            +inputbox
+              +label Код из смс
+              +input(type="text" name="code" required)
+              +e.P.text
+                a(href="#") Отправить код заново (45)
+
+          else
+            +inputbox
+              +label Мобильный телефон
+              +input(type="text" name="phone" placeholder="7хххххххххх" required)
+
+          +inputbox._button
+            +button('button')(type="submit")!= sent ? 'Войти' : 'Отправить код'
+
+    +e.P.copyright © Welny 2019
+
+
+mixin ui-kit-login()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент login
+      +ui-path
+        p Компонент: components/login/login
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +login
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

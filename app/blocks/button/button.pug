@@ -2,6 +2,12 @@ mixin button(newTag)
   +b(newTag || 'a').button&attributes(attributes)
     block
 
+mixin button-plus(newTag)
+  +b(newTag || 'a').button._plus&attributes(attributes)
+    +icon('plus')
+    +e.SPAN
+      block
+
 mixin ui-kit-button()
   +ui-section
     +ui-section-head

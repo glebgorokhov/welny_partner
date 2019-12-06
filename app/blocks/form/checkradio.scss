@@ -1,50 +1,78 @@
 .checkradio {
-  position: relative;
-  padding-left: 25px;
-  display: inline-block;
+  display: flex;
   cursor: pointer;
 
+  @include rule(align-items, (lg: center));
+
+  $b: &;
+
   &__input {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-
-    &:checked {
-
-      & + .checkradio__box {
-        &::before { opacity: 1; }
-      }
-    }
+    display: none;
   }
 
   &__box {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    border: 1px solid $color-border;
-    left: 0;
-    top: 2px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-grey;
+    box-sizing: border-box;
+    transition: border-color $ease-main;
+    flex-shrink: 0;
+
+    @include rule(margin-right, (xl: 29px, lg: 18px));
+    @include rule(margin-bottom, (lg: 4px));
+
+    #{$b}_margin & {
+      margin-right: 10px;
+    }
 
     &::before {
       content: '';
-      width: 9px;
-      height: 9px;
+      width: 20px;
+      height: 20px;
       background-color: $color-main;
       display: block;
       opacity: 0;
       transition: opacity $ease-main;
+      border-radius: 2px;
+      left: -1px;
+      top: -1px;
+      position: absolute;
+    }
 
-      @include center-image;
+    #{$b}__input:checked + & {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    #{$b}__input[type="radio"] + & {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin-right: 15px;
+      margin-top: 2px;
+
+      &:before {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+
+        @include center-image;
+      }
     }
   }
 
   &__content {
-    font-size: 14px;
-    line-height: 1.5;
+    @include rule(font-size, (xl: 18px, lg: 14px));
+    @include rule(line-height, (xl: 25px, lg: 20px));
+
+    flex: 1;
+
+    .inputbox__tooltip-wrapper {
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 5px;
+    }
   }
 }

@@ -3,15 +3,17 @@
 // ##########
 // Базовые настройки сетки сайта
 // ##########
-$container-width: 960px; // Максимальная ширина контейнера контента
-$container-padding: 20px; // Отступы слева и справа у контейнера
+$container-width: 1235px; // Максимальная ширина контейнера контента
+$container-padding: 30px; // Отступы слева и справа у контейнера
 $grid-container-width: 100%; // Ширина контейнера сетки
 $grid-cols: 12; // Количество колонок в сетке
-$grid-gap: 20px; // Расстояние между колонками
-$grid-gap-vertical: 20px; // Расстояние между строками в сетке
+$grid-gap: 30px; // Расстояние между колонками
+$grid-gap-vertical: 37px; // Расстояние между строками в сетке
 $breakpoints: (
   'xl': 1920px,
-  'lg': 1280px,
+  'xlg': 1700px,
+  'xmd': 1280px,
+  'lg': 1024px,
   'md': 1024px,
   'sm': 768px,
   'xs': 480px
@@ -20,11 +22,17 @@ $breakpoints: (
 // ##########
 // Цвета
 // ##########
-$color-basic: black; // Основной цвет текста (применяется к body)
-$color-placeholder: #777; // Основной цвет для placeholder
-$color-input: black; // Основной цвет input, select и textarea
-$color-main: #2252d8; // Основной фирменный цвет
-$color-border: #ccc; // Основной цвет границ таблиц, секций
+$color-grey: #BFBFBF;
+$color-brown: #2B140E;
+$color-main: #E08524; // Основной фирменный цвет
+$color-main-light: #FDF1E7;
+$color-basic: #534741; // Основной цвет текста (применяется к body)
+$color-grey-dark: #828282;
+
+$color-placeholder: $color-grey; // Основной цвет для placeholder
+$color-input: $color-basic; // Основной цвет input, select и textarea
+$color-border: $color-grey; // Основной цвет границ таблиц, секций
+
 
 // ##########
 // Массив цветов для UI-кита
@@ -45,8 +53,7 @@ $ease-main: .2s ease;
 // ##########
 // Шрифты
 // ##########
-$font-main: Arial, sans-serif; // Основной шрифт сайта
-$font-second: Times New Roman, sans-serif; // Дополнительный шрифт
+$font-main: 'Muller', sans-serif; // Основной шрифт сайта
 
 // ##########
 // Цвета для UI-кита (удалить, если он отсутствует)

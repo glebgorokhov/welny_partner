@@ -1,0 +1,29 @@
+mixin document(title, form, accepted)
+  +b.document&attributes(attributes)
+    +e.P.title!= title
+    +e.iframe
+      <iframe src="https://docs.google.com/document/d/e/2PACX-1vQMgZ0LjA_VKWRs4l52kGTFpALcWr7s5J4bAboa0OsBdt7vbUuQwLJorTtQhSdDsUKaE5ssKQo2VEiV/pub?embedded=true"></iframe>
+
+    if form
+      +e.FORM.form(action="#" method="post")
+        +checkradio(false, 'agree', 'agree', false, true).__checkbox Я ознакомился, согласился и полностью принимаю условия Оферты
+        +button('button')(type="submit").__button Продолжить
+
+    if accepted
+      +e.P.accepted Оферта акцептована 20.10.2019
+
+mixin ui-kit-document()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент document
+      +ui-path
+        p Компонент: components/document/document
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +document('Заголовок')
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

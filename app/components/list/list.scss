@@ -1,0 +1,65 @@
+.list {
+  display: block;
+
+  @include rule(padding-top, (xl: 34px, lg: 0));
+
+  $b: &;
+
+  &:not(:first-child) {
+    @include rule(margin-top, (xl: 13px, lg: 34px));
+  }
+
+  &__link {
+    display: block;
+    transition: color $ease-main;
+    position: relative;
+
+    @include rule(font-size, (xl: 18px, lg: 16px));
+    @include rule(line-height, (xl: 25px, lg: 20px));
+    @include rule(padding-left, (xl: 30px, lg: 40px));
+
+
+    #{$b}_mobile-nopadding & {
+      @include rule(padding-left, (lg: 0));
+    }
+
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 35px, lg: 20px));
+    }
+
+    #{$b}_ticks & {
+      @include screen('lg', min) {
+        padding-left: 35px;
+      }
+    }
+
+    &:hover, &.is-active {
+      color: $color-main;
+    }
+  }
+
+  &__tick {
+    @include rule(width, (xl: 20px, lg: 17px));
+    @include rule(height, (xl: 21px, lg: 17px));
+    @include rule(top, (xl: 0, lg: 1px));
+
+    position: absolute;
+    left: 0;
+    fill: $color-basic;
+    opacity: .3;
+    transition: fill $ease-main;
+
+    #{$b}__link.is-checked & {
+      opacity: 1;
+    }
+
+    #{$b}__link.is-checked:hover & {
+      fill: $color-main;
+    }
+
+    #{$b}__link.is-checked.is-active & {
+      opacity: 1;
+      fill: $color-main;
+    }
+  }
+}

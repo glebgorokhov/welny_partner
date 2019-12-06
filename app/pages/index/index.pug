@@ -1,7 +1,9 @@
 extends ../../layouts/default
 
 block head
-  - var pageTitle = projectName + ' | index'
+  - var pageTitle = projectName + ' | Профиль партнера'
+  - var activeMenuPoint = 1
 
 block content
-  p Страница: index
+  +change-button
+  +info-list(getData('info-lists').profile)

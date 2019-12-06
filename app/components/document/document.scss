@@ -1,0 +1,61 @@
+.document {
+  display: block;
+
+  @include rule(padding-bottom, (xl: 60px, lg: 0));
+
+  $b: &;
+
+  &__title {
+    font-weight: 500;
+
+    @include rule(font-size, (xl: 24px, lg: 18px));
+    @include rule(line-height, (xl: 30px, lg: 25px));
+  }
+
+  &__iframe {
+    width: 100%;
+    font-size: 0;
+
+    @include rule(margin-top, (xl: 25px, lg: 20px));
+    @include rule(height, (xl: 732px, lg: 415px));
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 1px solid $color-grey;
+      border-radius: 5px;
+    }
+  }
+
+  &__form {
+    @include rule(margin-top, (xl: 45px, lg: 51px));
+    @include rule(display, (xl: flex));
+    @include rule(flex-direction, (lg: column));
+
+    align-items: center;
+  }
+
+  &__checkbox {
+    @include rule(padding-right, (xl: 20px, lg: 0));
+    @include rule(width, (lg: 100%));
+
+    flex: 1;
+  }
+
+  &__button {
+    @include rule(min-width, (xl: 300px, lg: 191px));
+    @include rule(margin-top, (lg: 12px));
+
+    flex-shrink: 0;
+  }
+
+  &__accepted {
+    font-weight: 500;
+
+    @include rule(font-size, (xl: 24px, lg: 18px));
+    @include rule(line-height, (xl: 24px, lg: 25px));
+    @include rule(margin-top, (xl: 56px, lg: 30px));
+
+    text-align: center;
+  }
+}

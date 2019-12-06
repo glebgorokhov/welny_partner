@@ -1,14 +1,24 @@
 .input {
-  padding: 0 10px;
-  height: 40px;
+  @include rule(padding, (xl: 0 19px, lg: 0 10px));
+  @include rule(height, (xl: 50px, lg: 40px));
+  @include rule(font-size, (xl: 18px, lg: 16px));
+
   border: 1px solid $color-border;
   width: 100%;
   box-sizing: border-box;
-  font-size: 14px;
-  line-height: 1;
-  border-radius: 0;
+  line-height: 25px;
+  border-radius: 5px;
   min-height: 0;
   background-color: white;
+  transition: border-color $ease-main;
+
+  &_size_big {
+    @include rule(height, (lg: 50px));
+  }
+
+  .has-error & {
+    border-color: $color-main;
+  }
 }
 
 .textarea {

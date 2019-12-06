@@ -1,0 +1,11 @@
+extends ../../layouts/default_two-col
+
+block head
+  - var pageTitle = projectName + ' | Документы'
+  - var activeMenuPoint = 2
+
+block sidebar
+  +list(getData('lists').documentsOne)._ticks
+
+block content
+  +document('Оферта на оказание услуг СПА-процедур Корпоративным Клиентам', true)

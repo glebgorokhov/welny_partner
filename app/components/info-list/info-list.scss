@@ -1,0 +1,52 @@
+.info-list {
+  display: block;
+
+  $b: &;
+
+  &__section {
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 80px, lg: 37px));
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+
+    @include rule(font-size, (xl: 24px, lg: 18px));
+    @include rule(line-height, (xl: 24px, lg: 25px));
+  }
+
+  &__content {
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 40px, lg: 26px));
+    }
+  }
+
+  &__item {
+    @include rule(display, (xl: flex, lg: block));
+
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 21px, lg: 20px));
+    }
+  }
+
+  &__name {
+    @include rule(font-size, (xl: 18px, lg: 16px));
+
+    @include screen('lg', min) {
+      margin-right: 27px;
+      width: 196px;
+    }
+
+    flex-shrink: 0;
+    font-weight: 500;
+    line-height: 25px;
+  }
+
+  &__value {
+    @include rule(font-size, (xl: 18px, lg: 16px));
+
+    line-height: 25px;
+    flex: 1;
+  }
+}

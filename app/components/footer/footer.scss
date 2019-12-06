@@ -1,0 +1,16 @@
+.footer {
+  display: block;
+  text-align: right;
+
+  @include rule(margin-top, (xl: 30px, lg: 40px));
+  @include rule(font-size, (xl: 16px, lg: 14px));
+  @include rule(line-height, (xl: 16px, lg: 20px));
+
+  color: $color-grey;
+
+  $b: &;
+
+  .container {
+    width: 100%;
+  }
+}

@@ -1,0 +1,97 @@
+mixin edit(data, noCancel)
+  +b.edit&attributes(attributes)
+    each section in data
+      +e.section
+        +e.P.section-title!= section.title
+        +e.grid
+          +grid
+            each item in section.items
+              +col(item.cols)(class=(item.noFlex ? false : 'grid__col_flex'))
+                +inputbox(class=(item.error ? 'has-error' : false))
+                  if item.type === "sex"
+                    +e.sex
+                      +label
+                        span!= item.label
+                      +e.sex-items
+                        each sexItem in item.sexItems
+                          +checkradio(true, sexItem.name, sexItem.value, sexItem.checked, true)!= sexItem.text
+
+                  else if item.type === "checkboxes"
+                    +e.checkboxes
+                      each checkbox in item.checkboxes
+                        +checkradio(false, 'check', checkbox, false, true)._margin!= checkbox
+
+                  else if item.type === "checkbox"
+                    +checkradio(false, 'check', item.checkboxText, false, true)._margin
+                      span!= item.checkboxText
+                      if item.tooltip
+                        .inputbox__tooltip-wrapper
+                          .inputbox__tooltip-button
+                            +icon('question')
+                          .inputbox__tooltip!= item.tooltip
+
+                  else if item.type === "checkable_inputs"
+                    +e.checkable
+                      +checkradio(false, 'check', item.checkboxText, item.checked, true)._margin
+                        span!= item.checkboxText
+                        if item.tooltip
+                          .inputbox__tooltip-wrapper
+                            .inputbox__tooltip-button
+                              +icon('question')
+                            .inputbox__tooltip!= item.tooltip
+
+                      +e.right(class=(item.checked ? false : 'is-hidden'))
+                        each input in item.inputs
+                          +e.input-small-col
+                            +label!= input
+                            +input-wrapper
+                              +input(type="text")._size_big
+
+                  else
+                    +label
+                      span!= item.label
+                      if item.tooltip
+                        +e.tooltip-wrapper
+                          +e.tooltip-button
+                            +icon('question')
+                          +e.tooltip!= item.tooltip
+
+                    +input-wrapper
+                      if item.type === "text"
+                        +input(type="text" value=item.value placeholder=item.placeholder)._size_big
+                      if item.type === "date"
+                        +input(type="text" value=item.value placeholder=item.placeholder)._size_big
+                        +icon('calendar').__calendar-icon
+                      if item.type === "select"
+                        +select()._big
+                          each option in item.options
+                            option(value=option)!= option
+
+                  if item.text
+                    +e.P.text._small!= item.text
+
+                  if item.error
+                    +e.P.error-text!= item.error
+
+    +e.buttons
+      +button('button')(type="submit").__button Сохранить
+
+      if !noCancel
+        +button()(href="#")._style_empty.__button Отмена
+
+
+mixin ui-kit-edit()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент edit
+      +ui-path
+        p Компонент: components/edit/edit
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +edit(getData('edit_partner'))
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

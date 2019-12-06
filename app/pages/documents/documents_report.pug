@@ -1,0 +1,11 @@
+extends ../../layouts/default_two-col
+
+block head
+  - var pageTitle = projectName + ' | Отчеты'
+  - var activeMenuPoint = 4
+
+block sidebar
+  +list(getData('lists').reports)._mobile-nopadding
+
+block content
+  +document('Доступ к сервису')

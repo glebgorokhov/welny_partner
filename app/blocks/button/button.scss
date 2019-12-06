@@ -1,20 +1,54 @@
 .button {
   display: inline-block;
-  padding: 0 15px;
+  padding: 0 20px;
   border: 0;
   vertical-align: middle;
   box-sizing: border-box;
   background-color: $color-main;
   transition: opacity $ease-main;
   cursor: pointer;
-  font-size: 14px;
-  line-height: 40px;
-  height: 40px;
+
+  @include rule(font-size, (xl: 18px, lg: 16px));
+  @include rule(line-height, (xl: 60px, lg: 40px));
+  @include rule(height, (xl: 60px, lg: 40px));
+
   color: white;
+  fill: white;
   appearance: none;
-  border-radius: 3px;
+  border-radius: 5px;
+  text-align: center;
 
   $b: &;
+
+  &_plus {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 30px;
+
+    span {
+      @include rule(flex, (lg: 1));
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-right: auto;
+      padding-right: 10px;
+    }
+  }
+
+  &_style {
+    &_light {
+      background-color: $color-main-light;
+      color: $color-main;
+    }
+
+    &_empty {
+      background-color: transparent;
+      color: $color-main;
+    }
+  }
 
   &[disabled] {
     opacity: .5;

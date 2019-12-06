@@ -1,0 +1,19 @@
+mixin change-button()
+  +b.change-button&attributes(attributes)
+    +button()(href="#")._style_light.__button Изменить
+
+mixin ui-kit-change-button()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент change-button
+      +ui-path
+        p Компонент: components/change-button/change-button
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +change-button
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()
