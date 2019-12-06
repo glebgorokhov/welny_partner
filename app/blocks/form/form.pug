@@ -17,12 +17,6 @@ mixin input-wrapper()
 mixin input()
   +b.INPUT.input&attributes(attributes)
 
-mixin input-number()
-  +b.input-numberbox
-    +e.SPAN.button.js-numberbox-minus
-    +input.__input.js-numberbox-input&attributes(attributes)
-    +e.SPAN.button.js-numberbox-plus
-
 mixin textarea()
   +b.TEXTAREA.textarea&attributes(attributes)
     block
@@ -37,9 +31,5 @@ mixin checkradio(isRadio, name, value, checked, required)
     +e.SPAN.box
     +e.SPAN.content
       block
-
-mixin range()
-  +b.range&attributes(attributes).js-range
-    block
 
 include ui-kit-form

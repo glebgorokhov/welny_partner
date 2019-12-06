@@ -9,5 +9,4 @@
  * Так же доступа к блокам, которые собираются с помощью вебпака не будет.
  */
 
-@@include('../../node_modules/parsleyjs/dist/parsley.min.js')
 /* eslint-enable */

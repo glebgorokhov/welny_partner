@@ -38,11 +38,12 @@ $color-border: $color-grey; // Основной цвет границ табли
 // Массив цветов для UI-кита
 // ##########
 $colors: (
-  '$color-basic': black,
-  '$color-placeholder': #777,
-  '$color-input': black,
-  '$color-main': #2252d8,
-  '$color-border': #ccc,
+  '$color-grey': #bfbfbf,
+  '$color-brown': #2b140e,
+  '$color-main': #e08524,
+  '$color-main-light': #fdf1e7,
+  '$color-basic': #534741,
+  '$color-grey-dark': #828282,
 );
 
 // ##########

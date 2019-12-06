@@ -29,7 +29,7 @@ block content
     +e.SECTION.head&attributes(attributes)
       .container
         +e.IMG.logo(src="assets/images/logo.svg", alt="Логотип проекта")
-        +e.name Название проекта
+        +e.name Велни.Партнер
 
     //- Сетка
     +ui-section._grid
@@ -79,8 +79,7 @@ block content
           p Переменные находятся в файле styles/helpers/_variables.scss
           p Шрифты подключены в styles/helpers/_fonts.scss
         +ui-description
-          p Основной шрифт: Arial ($font-main), font-weight: 400, 600
-          p Дополнительный шрифт: Times New Roman ($font-second), font-weight: 400, 600
+          p Основной шрифт: Muller ($font-main)
 
     //- Цвета
     +ui-section
@@ -94,117 +93,34 @@ block content
             +ui-color._color
             - n++
 
-    //- Градиенты
-    +ui-section
-      +ui-section-head
-          +ui-title Градиенты
-          +ui-path Миксины градиентов находятся в файле styles/helpers/_gradients.scss
-      +ui-section-content()
-        +ui-elements-list()
-          - var n = 0;
-          while n < 20
-            +ui-color._gradient
-            - n++
-
-    //- Таблицы
-    +ui-kit-table
-
-    //- Табы
-    +ui-kit-tabs
-
-    //- Попапы
-    +ui-kit-popups
-
-    //- Ссылки
-    +ui-kit-links
-
-    //- Скроллбар
-    +ui-kit-scrollbar
-
-    //- Слайдер
-    +ui-kit-slider
-
-    //- Подсказки
-    +ui-kit-tooltip
-
-    //- Карты
-    +ui-kit-map
-
-    //- Анимации
-    +ui-section
-      +ui-section-head
-        +ui-title Анимации при скролле
-        +ui-path
-          p Блок: blocks/js-functions/scrollAnimation
-        +ui-description
-          p .js-sr — общий класс для анимируемых элементов
-          p Предустановленные модификаторы для появления с разных сторон:
-          +ui-special
-            p .js-sr_top — появление сверху
-            p .js-sr_right — появление справа
-            p .js-sr_bottom — появление снизу
-            p .js-sr_left — появление слева
-
-      +ui-section-content()
-        +ui-elements-list()
-          +button().js-sr.js-sr_left .js-sr_left
-          +button().js-sr.js-sr_top .js-sr_top
-          +button().js-sr.js-sr_right .js-sr_right
-          +button().js-sr.js-sr_bottom .js-sr_bottom
-
-    //- Хлебные крошки
-    +ui-kit-breadcrumbs
-
-    //- Рейтинг
-    +ui-kit-rating
-
-    //- Блок accordion
-    +ui-kit-accordion
-
     //- Блок button
     +ui-kit-button
-
-    //- Блок dropdown
-    +ui-kit-dropdown
 
     //- Блок form
     +ui-kit-form
 
-    //- Блок content-zone
-    +ui-kit-content-zone
-
     //- Компонент header
     +ui-kit-header
-  
-
-    //- Компонент login
-    +ui-kit-login
-  
-
-    //- Компонент main
-    +ui-kit-main
-  
 
     //- Компонент footer
     +ui-kit-footer
-  
+
 
     //- Компонент change-button
     +ui-kit-change-button
-  
+
 
     //- Компонент info-list
     +ui-kit-info-list
-  
+
 
     //- Компонент list
     +ui-kit-list
-  
+
 
     //- Компонент document
     +ui-kit-document
-  
+
 
     //- Компонент edit
     +ui-kit-edit
-  
