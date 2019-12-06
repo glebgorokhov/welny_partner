@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Велни.Партнер | Редактирование партнера</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#e08524">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#3a1d16">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#3a1d16">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header"><a class="header__logo" href="#"><img src="assets/images/logo.svg" /></a><a class="header__quit" href="#"><span class="header__circle"><svg><use xlink:href="assets/images/icon.svg#icon_quit"></use></svg></span><span class="header__quit-text">Выйти</span></a>
+        <div class="container">
+            <div class="header__menu"><a class="header__link is-active" href="#">Профиль партнера</a><a class="header__link" href="#">Документы</a><a class="header__link" href="#">Тарифы</a><a class="header__link" href="#">Отчеты</a><a class="header__link" href="#">Специалисты</a><a class="header__link" href="#">Помощь</a></div>
+        </div>
+    </div>
+    <main class="main" role="main">
+        <div class="main__content">
+            <div class="container">
+                <div class="edit">
+                    <div class="edit__section">
+                        <p class="edit__section-title">Персональные данные</p>
+                        <div class="edit__grid">
+                            <div class="grid">
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Фамилия</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="Иванов" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Имя</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="Иван" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Отчество (если есть)</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="Иванович" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <div class="inputbox__sex">
+                                            <p class="inputbox__label"><span>Пол</span></p>
+                                            <div class="inputbox__sex-items"><label class="checkradio"><input class="checkradio__input" name="sex" value="male" checked="checked" type="radio" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Мужской</span></label><label class="checkradio"><input class="checkradio__input" name="sex" value="female" type="radio" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Женский</span></label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Дата рождения</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="01.02.1990" /><svg class="inputbox__calendar-icon"><use xlink:href="assets/images/icon.svg#icon_calendar"></use></svg></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Место рождения</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="Москва" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Гражданство</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="РФ" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>ИНН</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="123456789012" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit__section">
+                        <p class="edit__section-title">Паспортные данные</p>
+                        <div class="edit__grid">
+                            <div class="grid">
+                                <div class="grid__col grid__col_xl_2 grid__col_lg_6 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Серия</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="8834" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Номер</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="059352" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_6 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Кем выдан</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="Заводским отелом УФМС г. Москва" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_2 grid__col_xlg_6 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Код подразделения</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="121-654" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Дата выдачи</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="01.02.2010" /><svg class="inputbox__calendar-icon"><use xlink:href="assets/images/icon.svg#icon_calendar"></use></svg></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit__section">
+                        <p class="edit__section-title">Адрес регистрации</p>
+                        <div class="edit__grid">
+                            <div class="grid">
+                                <div class="grid__col grid__col_xl_6 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Улица</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="Суворовская" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_2 grid__col_lg_3 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Дом</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="21" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_2 grid__col_lg_4 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Строение</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="А" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_2 grid__col_lg_5 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Квартира</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="49" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_7 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Город</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="Москва" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_2 grid__col_lg_5 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Почтовый индекс</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="123000" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit__section">
+                        <p class="edit__section-title">Адрес проживания</p>
+                        <div class="edit__grid">
+                            <div class="grid">
+                                <div class="grid__col grid__col_xl_6 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Улица</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="Суворовская" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_2 grid__col_lg_3 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Дом</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="21" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_2 grid__col_lg_4 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Строение</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="А" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_2 grid__col_lg_5 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Квартира</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="49" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_7 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Город</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="Москва" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_2 grid__col_lg_5 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Почтовый индекс</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="123000" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit__section">
+                        <p class="edit__section-title">Контактная информация</p>
+                        <div class="edit__grid">
+                            <div class="grid">
+                                <div class="grid__col grid__col_xl_6 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox has-error">
+                                        <p class="inputbox__label"><span>Адрес электронной почты</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="ers!mail.ru" /></div>
+                                        <p class="inputbox__error-text">Неверно введен e-mail</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit__section">
+                        <p class="edit__section-title">Банковские реквизиты</p>
+                        <div class="edit__grid">
+                            <div class="grid">
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Наименование банка</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="АО «АК Банк»" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>БИК</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="043601878" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>КПП</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="631501001" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_6 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Корреспондентский счет</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="30101810000000000878" /></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_6 grid__col_lg_12 grid__col_flex">
+                                    <div class="inputbox">
+                                        <p class="inputbox__label"><span>Расчетный счет</span></p>
+                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" value="40503810145250003051" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit__buttons"><button class="button edit__button" type="submit">Сохранить</button><a class="button button_style_empty edit__button" href="#">Отмена</a></div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container container_big">
+                    <p>© Welny 2019</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

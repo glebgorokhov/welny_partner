@@ -1,9 +1,0 @@
-extends ../../layouts/default
-
-block head
-  - var pageTitle = projectName + ' | Профиль партнера'
-  - var activeMenuPoint = 1
-
-block content
-  +change-button
-  +info-list(getData('info-lists').profile)
