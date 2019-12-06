@@ -4,13 +4,14 @@
   $b: &;
 
   &__section {
+
     &:not(:first-child) {
       @include rule(margin-top, (xl: 80px, lg: 37px));
     }
   }
 
   &__grid {
-    padding-top: 0.1px;
+    padding-top: .1px;
 
     @include rule(margin-top, (xl: 47px, lg: 36px));
   }

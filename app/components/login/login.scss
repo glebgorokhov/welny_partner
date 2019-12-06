@@ -9,7 +9,7 @@
   background-image: url('../images/login_background.jpg');
   background-size: cover;
 
-  @include rule(padding, (xl: 64px 0 79px, lg: 72px 0 26px));
+  @include rule(padding, (xl: 64px 0 0, lg: 72px 0 0));
 
   $b: &;
 
@@ -88,7 +88,7 @@
     }
 
     &:not(:first-child) {
-      @include rule(margin-top, (xl: 53px, lg: 0px));
+      @include rule(margin-top, (xl: 53px, lg: 0));
     }
   }
 
@@ -99,6 +99,7 @@
     @include rule(padding-right, (xl: 90px, lg: 29px));
     @include rule(font-size, (xl: 16px, lg: 14px));
     @include rule(line-height, (xl: 1, lg: 20px));
+    @include rule(padding-bottom, (xl: 79px, lg: 26px));
 
     color: $color-grey;
   }

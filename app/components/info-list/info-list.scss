@@ -4,6 +4,7 @@
   $b: &;
 
   &__section {
+
     &:not(:first-child) {
       @include rule(margin-top, (xl: 80px, lg: 37px));
     }
@@ -17,6 +18,7 @@
   }
 
   &__content {
+
     &:not(:first-child) {
       @include rule(margin-top, (xl: 40px, lg: 26px));
     }

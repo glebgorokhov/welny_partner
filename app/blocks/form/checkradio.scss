@@ -41,19 +41,20 @@
     }
 
     #{$b}__input:checked + & {
+
       &::before {
         opacity: 1;
       }
     }
 
-    #{$b}__input[type="radio"] + & {
+    #{$b}__input[type='radio'] + & {
       width: 15px;
       height: 15px;
       border-radius: 50%;
       margin-right: 15px;
       margin-top: 2px;
 
-      &:before {
+      &::before {
         width: 7px;
         height: 7px;
         border-radius: 50%;
@@ -67,7 +68,7 @@
     @include rule(font-size, (xl: 18px, lg: 14px));
     @include rule(line-height, (xl: 25px, lg: 20px));
 
-    flex: 1;
+    flex-grow: 1;
 
     .inputbox__tooltip-wrapper {
       display: inline-block;

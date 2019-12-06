@@ -46,6 +46,7 @@
     @include rule(padding, (lg: 0 28px));
 
     @include screen('lg') {
+
       &::after {
         content: '';
         height: 10px;
@@ -69,6 +70,7 @@
     }
 
     &.is-active {
+
       &::after {
         content: '';
         position: absolute;
