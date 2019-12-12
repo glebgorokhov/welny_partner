@@ -32,6 +32,7 @@
 }
 
 @include screen('lg') {
+
   * {
     -ms-overflow-style: none; // IE 10+
     overflow: -moz-scrollbars-none; // Firefox
