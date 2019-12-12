@@ -46,6 +46,7 @@
     @include rule(padding, (lg: 0 28px));
 
     @include screen('lg') {
+      -webkit-overflow-scrolling: touch;
 
       &::after {
         content: '';
