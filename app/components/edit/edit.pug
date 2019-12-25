@@ -28,7 +28,7 @@ mixin edit(data, noCancel)
                       +col({xl: 8, lg: 12})
                         +grid
                           each input in item.inputs
-                            +col({xl: 6, lg: 12})
+                            +col({xl: 6, lg: 12}).grid__col_flex
                               +inputbox
                                 +label!= input
                                 +input-wrapper
