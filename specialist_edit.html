@@ -41,21 +41,24 @@
                         <div class="edit__grid">
                             <div class="grid">
                                 <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
-                                    <div class="inputbox">
+                                    <div class="inputbox has-error">
                                         <p class="inputbox__label"><span>Фамилия</span></p>
                                         <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
+                                        <p class="inputbox__error-text">Неверно введена фамилия</p>
                                     </div>
                                 </div>
                                 <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
-                                    <div class="inputbox">
+                                    <div class="inputbox has-error">
                                         <p class="inputbox__label"><span>Имя</span></p>
                                         <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
+                                        <p class="inputbox__error-text">Неверно введено имя</p>
                                     </div>
                                 </div>
                                 <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
-                                    <div class="inputbox">
+                                    <div class="inputbox has-error">
                                         <p class="inputbox__label"><span>Отчество (если есть)</span></p>
                                         <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
+                                        <p class="inputbox__error-text">Неверно введено отчество человека</p>
                                     </div>
                                 </div>
                                 <div class="grid__col grid__col_xl_4 grid__col_lg_12 grid__col_flex">
@@ -291,54 +294,63 @@
                                     </div>
                                 </div>
                                 <div class="grid__col grid__col_xl_8 grid__col_lg_12">
-                                    <div class="inputbox">
-                                        <div class="inputbox__checkboxes"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Классический" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Классический</span></label><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Спортивный" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Спортивный</span></label><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Антицеллюлитный" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Антицеллюлитный</span></label><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Лимфодренажный" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Лимфодренажный</span></label><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Антистрессовый" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Антистрессовый</span></label><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Офисный" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Офисный</span></label><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Массаж без стола" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Массаж без стола</span></label></div>
+                                    <div class="grid grid_checkboxes">
+                                        <div class="grid__col grid__col_xl_6 grid__col_lg_12"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Классический" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Классический</span></label></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_lg_12"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Спортивный" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Спортивный</span></label></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_lg_12"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Антицеллюлитный" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Антицеллюлитный</span></label></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_lg_12"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Лимфодренажный" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Лимфодренажный</span></label></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_lg_12"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Антистрессовый" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Антистрессовый</span></label></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_lg_12"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Офисный" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Офисный</span></label></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_lg_12"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Массаж без стола" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Массаж без стола</span></label></div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_xl_12 grid__col_lg_12 grid__col_flex">
-                                    <div class="inputbox">
-                                        <div class="inputbox__checkable"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Свой стол" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content"><span>Свой стол</span></span></label>
-                                            <div class="inputbox__right is-hidden">
-                                                <div class="inputbox__input-small-col">
-                                                    <p class="inputbox__label">Марка стола</p>
-                                                    <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
+                                <div class="grid__col grid__col_xl_12 grid__col_lg_12 grid__col_flex grid__col_checkable-inputs">
+                                    <div class="grid">
+                                        <div class="grid__col grid__col_xl_4 grid__col_lg_12"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Свой стол" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content"><span>Свой стол</span></span></label></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_12 grid__col_lg_12 grid__col_flex grid__col_checkable-inputs">
+                                    <div class="grid">
+                                        <div class="grid__col grid__col_xl_4 grid__col_lg_12"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Свой стул" checked="checked" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content"><span>Свой стул</span></span></label></div>
+                                        <div class="grid__col grid__col_xl_8 grid__col_lg_12">
+                                            <div class="grid">
+                                                <div class="grid__col grid__col_xl_6 grid__col_lg_12 grid__col_flex">
+                                                    <div class="inputbox">
+                                                        <p class="inputbox__label">Марка стула</p>
+                                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_xl_12 grid__col_lg_12 grid__col_flex">
-                                    <div class="inputbox">
-                                        <div class="inputbox__checkable"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Свой стул" checked="checked" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content"><span>Свой стул</span></span></label>
-                                            <div class="inputbox__right">
-                                                <div class="inputbox__input-small-col">
-                                                    <p class="inputbox__label">Марка стула</p>
-                                                    <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="grid__col grid__col_xl_12 grid__col_lg_12 grid__col_flex">
-                                    <div class="inputbox">
-                                        <div class="inputbox__checkable"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Наличие автомобиля" checked="checked" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content"><span>Наличие автомобиля</span>
+                                <div class="grid__col grid__col_xl_12 grid__col_lg_12 grid__col_flex grid__col_checkable-inputs">
+                                    <div class="grid">
+                                        <div class="grid__col grid__col_xl_4 grid__col_lg_12"><label class="checkradio checkradio_margin"><input class="checkradio__input" name="check" value="Наличие автомобиля" checked="checked" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content"><span>Наличие автомобиля</span>
                                                     <div class="inputbox__tooltip-wrapper">
                                                         <div class="inputbox__tooltip-button"><svg><use xlink:href="assets/images/icon.svg#icon_question"></use></svg></div>
                                                         <div class="inputbox__tooltip">Информация о машине необходима для организации парковки в случае, если вы приезжаете на заказ на машине.</div>
                                                     </div>
-                                                </span></label>
-                                            <div class="inputbox__right">
-                                                <div class="inputbox__input-small-col">
-                                                    <p class="inputbox__label">Марка машины</p>
-                                                    <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
+                                                </span></label></div>
+                                        <div class="grid__col grid__col_xl_8 grid__col_lg_12">
+                                            <div class="grid">
+                                                <div class="grid__col grid__col_xl_6 grid__col_lg_12 grid__col_flex">
+                                                    <div class="inputbox">
+                                                        <p class="inputbox__label">Марка машины</p>
+                                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
+                                                    </div>
                                                 </div>
-                                                <div class="inputbox__input-small-col">
-                                                    <p class="inputbox__label">Номер машины</p>
-                                                    <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
+                                                <div class="grid__col grid__col_xl_6 grid__col_lg_12 grid__col_flex">
+                                                    <div class="inputbox">
+                                                        <p class="inputbox__label">Номер машины</p>
+                                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
+                                                    </div>
                                                 </div>
-                                                <div class="inputbox__input-small-col">
-                                                    <p class="inputbox__label">Цвет машины</p>
-                                                    <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
+                                                <div class="grid__col grid__col_xl_6 grid__col_lg_12 grid__col_flex">
+                                                    <div class="inputbox">
+                                                        <p class="inputbox__label">Цвет машины</p>
+                                                        <div class="inputbox__wrapper"><input class="input input_size_big" type="text" /></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
