@@ -8,7 +8,8 @@
           "lg": 12
         },
         "label": "Фамилия",
-        "type": "text"
+        "type": "text",
+        "error": "Неверно введена фамилия"
       },
       {
         "cols": {
@@ -16,7 +17,8 @@
           "lg": 12
         },
         "label": "Имя",
-        "type": "text"
+        "type": "text",
+        "error": "Неверно введено имя"
       },
       {
         "cols": {
@@ -24,7 +26,8 @@
           "lg": 12
         },
         "label": "Отчество (если есть)",
-        "type": "text"
+        "type": "text",
+        "error": "Неверно введено отчество человека"
       },
       {
         "cols": {
@@ -348,10 +351,7 @@
         "type": "checkable_inputs",
         "checkboxText": "Свой стол",
         "checked": false,
-        "tooltip": false,
-        "inputs": [
-          "Марка стола"
-        ]
+        "tooltip": false
       },
       {
         "cols": {

@@ -8,6 +8,8 @@ $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной к
   display: flex;
   flex-wrap: wrap;
 
+  $b: &;
+
   @include rule(margin, (xl: -$grid-gap-vertical (-$grid-gap/2) 0, lg: -20px -5px 0));
 
   &__col {
@@ -23,6 +25,15 @@ $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной к
     &_flex {
       display: flex;
       flex-direction: column;
+    }
+
+    &_checkable-inputs {
+      @include rule(margin-top, (lg: 12px));
+      @include rule(margin-bottom, (lg: 12px));
+
+      & + & {
+        @include rule(margin-top, (lg: 0px));
+      }
     }
 
     @for $i from 1 through 15 {
@@ -41,6 +52,14 @@ $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной к
           }
         }
       }
+    }
+  }
+
+  &_checkboxes {
+    @include rule(margin-top, (xl: -22px, lg: -15px));
+
+    #{$b}__col {
+      @include rule(padding-top, (xl: 22px, lg: 15px));
     }
   }
 }

@@ -90,10 +90,16 @@
 
   &__error-text {
     @include rule(font-size, (xl: 14px, lg: 16px));
-    @include rule(line-height, (xl: 25px, lg: 20px));
+    @include rule(line-height, (xl: 18px, lg: 20px));
 
     color: $color-main;
     display: none;
+    margin-top: 3px;
+
+    @include screen('lg', min) {
+      height: 25px;
+      margin-top: 5px;
+    }
 
     .has-error & {
       display: block;
