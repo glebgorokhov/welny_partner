@@ -29,7 +29,6 @@
     @include rule(line-height, (xl: 25px, lg: 20px));
 
     letter-spacing: -.02em;
-    flex-grow: 1;
     display: flex;
     align-items: flex-end;
   }
@@ -91,15 +90,10 @@
   &__error-text {
     @include rule(font-size, (xl: 14px, lg: 16px));
     @include rule(line-height, (xl: 18px, lg: 20px));
+    @include rule(margin-top, (xl: 5px, lg: 3px));
 
     color: $color-main;
     display: none;
-    margin-top: 3px;
-
-    @include screen('lg', min) {
-      height: 25px;
-      margin-top: 5px;
-    }
 
     .has-error & {
       display: block;
