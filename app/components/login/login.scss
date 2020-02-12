@@ -103,4 +103,34 @@
 
     color: $color-grey;
   }
+
+  &__form_editor {
+    @include screen('lg') {
+
+      .inputbox__label {
+        text-align: center;
+        display: block;
+      }
+
+      .inputbox {
+        flex-grow: 0;
+
+        & + .inputbox {
+          margin-top: 15px;
+        }
+
+        &__label {
+          margin-bottom: 4px;
+        }
+
+        &_button {
+          align-items: center;
+
+          .button {
+            width: 165px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -32,7 +32,7 @@ $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной к
       @include rule(margin-bottom, (lg: 12px));
 
       & + & {
-        @include rule(margin-top, (lg: 0px));
+        @include rule(margin-top, (lg: 0));
       }
     }
 

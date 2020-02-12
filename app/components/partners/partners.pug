@@ -1,0 +1,36 @@
+mixin partners-row(data)
+  each row in data
+    +e.row(class=row.rowClass)
+      each col in row.cols
+        +e.col(class=col.colClass)
+          if col.textContent
+            p(class=col.textClass)!= col.textContent
+
+          if col.linkButton
+            +e.A.arrow(href="#")
+              +icon('arrow')
+
+          if col.rows
+            +partners-row(col.rows)
+
+mixin partners()
+  - var data = getData('partners');
+
+  +b.partners(cellspacing="0" cellpadding="0")&attributes(attributes)
+    +partners-row(data)
+
+mixin ui-kit-partners()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент partners
+      +ui-path
+        p Компонент: components/partners/partners
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +partners
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

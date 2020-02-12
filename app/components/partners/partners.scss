@@ -1,0 +1,156 @@
+.partners {
+  display: block;
+
+  @include rule(font-size, (xl: 18px, lg: 16px));
+  @include rule(line-height, (xl: (25/18)*1em, lg: 1));
+  @include rule(border-width, (xl: 0 1px, lg: 0));
+  @include rule(margin, (lg: 0 -28px));
+
+  border-style: solid;
+  border-color: $color-grey;
+
+  $b: &;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-grey;
+    flex-wrap: wrap;
+
+    @include rule(padding, (lg: 21px 28px 11px));
+    @include rule(border-bottom-color, (lg: $color-main-light));
+
+    #{$b}__col &:last-child {
+      border-bottom: 0;
+    }
+
+    &:nth-of-type(2) {
+      @include rule(border-top, (lg: 1px solid $color-main-light));
+    }
+
+    #{$b}__col_big & {
+      @include screen('lg') {
+        flex: 1;
+        border: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &_head {
+      margin: 0 -1px;
+      background-color: $color-main-light;
+      font-weight: 500;
+    }
+  }
+
+  &__col {
+    @include rule(padding, (xl: 12px 16px, lg: 0));
+
+    flex: 1;
+    box-sizing: border-box;
+
+    a {
+      color: $color-main;
+      transition: opacity $ease-main;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+
+    #{$b}__row_head & {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+
+    &_big {
+      @include rule(width, (xl: 50%, lg: 100%));
+      @include rule(display, (lg: flex));
+      @include rule(align-items, (lg: flex-start));
+      @include rule(margin-top, (lg: 20px));
+
+      flex: 0 auto;
+      padding: 0;
+    }
+
+    &_date {
+      @include screen('lg') {
+        border: 1px solid $color-grey;
+        border-radius: 24px;
+        height: 32px;
+        box-sizing: border-box;
+        line-height: 30px;
+        text-align: center;
+        font-size: 14px;
+        width: 100%;
+        flex: 0 auto;
+      }
+    }
+
+    &_phone {
+      @include screen('lg') {
+        min-width: calc(33.3333% - 6.6666px);
+        flex: 0 auto;
+        margin-right: 10px;
+        white-space: nowrap;
+      }
+    }
+
+    &_title {
+      @include screen('lg') {
+        font-size: 12px;
+        line-height: 1;
+        text-align: center;
+        color: $color-grey;
+        margin-top: 5px;
+        flex: 0 auto;
+        width: 100%;
+      }
+    }
+
+    &_type {
+      @include screen('lg') {
+        position: relative;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  &__arrow {
+    @include rule(display, (xl: none, lg: block));
+
+    width: 8px;
+    height: 12px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: opacity $ease-main;
+    fill: $color-main;
+
+    &:hover {
+      opacity: .5;
+    }
+
+    &::after {
+      content: '';
+      left: -8px;
+      right: -8px;
+      top: -6px;
+      bottom: -6px;
+      position: absolute;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

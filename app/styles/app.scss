@@ -42,3 +42,7 @@
     }
   }
 }
+
+.hide-lg {
+  @include rule(display, (lg: none));
+}

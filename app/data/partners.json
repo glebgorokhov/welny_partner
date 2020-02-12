@@ -1,0 +1,304 @@
+[
+  {
+    "rowClass": "_head hide-lg",
+    "cols": [
+      {
+        "textContent": "Телефон"
+      },
+      {
+        "textContent": "Статус"
+      },
+      {
+        "textContent": "Документы"
+      },
+      {
+        "textContent": "Дата принятия"
+      }
+    ]
+  },
+  {
+    "rowClass": "",
+    "cols": [
+      {
+        "colClass": "_phone",
+        "textContent": "<a href='tel:7926642960'>7926642960</a>",
+        "textClass": "",
+        "textTitle": ""
+      },
+      {
+        "colClass": "_type",
+        "textContent": "Самозанятый",
+        "linkButton": true
+      },
+      {
+        "colClass": "_big",
+        "rows": [
+          {
+            "cols": [
+              {
+                "textContent": "Доступ к сервису",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "19.10.2019",
+                "colClass": "_date"
+              }
+            ]
+          },
+          {
+            "cols": [
+              {
+                "textContent": "Корпоративные клиенты",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "19.10.2019",
+                "colClass": "_date"
+              }
+            ]
+          },
+          {
+            "cols": [
+              {
+                "textContent": "Продвижение",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "19.10.2019",
+                "colClass": "_date"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rowClass": "",
+    "cols": [
+      {
+        "colClass": "_phone",
+        "textContent": "<a href='tel:7177069050'>7177069050</a>",
+        "textClass": "",
+        "textTitle": ""
+      },
+      {
+        "colClass": "_type",
+        "textContent": "Самозанятый",
+        "linkButton": true
+      },
+      {
+        "colClass": "_big",
+        "rows": [
+          {
+            "cols": [
+              {
+                "textContent": "Доступ к сервису",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "20.10.2019",
+                "colClass": "_date"
+              }
+            ]
+          },
+          {
+            "cols": [
+              {
+                "textContent": "Корпоративные клиенты",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "12.10.2019",
+                "colClass": "_date"
+              }
+            ]
+          },
+          {
+            "cols": [
+              {
+                "textContent": "Продвижение",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "12.10.2019",
+                "colClass": "_date"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rowClass": "",
+    "cols": [
+      {
+        "colClass": "_phone",
+        "textContent": "<a href='tel:79257104441'>79257104441</a>",
+        "textClass": "",
+        "textTitle": ""
+      },
+      {
+        "colClass": "_type",
+        "textContent": "Индивидуальный предприниматель",
+        "linkButton": true
+      },
+      {
+        "colClass": "_big",
+        "rows": [
+          {
+            "cols": [
+              {
+                "textContent": "Доступ к сервису",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "-",
+                "colClass": "_date"
+              }
+            ]
+          },
+          {
+            "cols": [
+              {
+                "textContent": "Корпоративные клиенты",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "-",
+                "colClass": "_date"
+              }
+            ]
+          },
+          {
+            "cols": [
+              {
+                "textContent": "Продвижение",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "-",
+                "colClass": "_date"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rowClass": "",
+    "cols": [
+      {
+        "colClass": "_phone",
+        "textContent": "<a href='tel:7926642960'>7926642960</a>",
+        "textClass": "",
+        "textTitle": ""
+      },
+      {
+        "colClass": "_type",
+        "textContent": "Самозанятый",
+        "linkButton": true
+      },
+      {
+        "colClass": "_big",
+        "rows": [
+          {
+            "cols": [
+              {
+                "textContent": "Доступ к сервису",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "15.10.2019",
+                "colClass": "_date"
+              }
+            ]
+          },
+          {
+            "cols": [
+              {
+                "textContent": "Корпоративные клиенты",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "15.10.2019",
+                "colClass": "_date"
+              }
+            ]
+          },
+          {
+            "cols": [
+              {
+                "textContent": "Продвижение",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "15.10.2019",
+                "colClass": "_date"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "rowClass": "",
+    "cols": [
+      {
+        "colClass": "_phone",
+        "textContent": "<a href='tel:7926642960'>7926642960</a>",
+        "textClass": "",
+        "textTitle": ""
+      },
+      {
+        "colClass": "_type",
+        "textContent": "Самозанятый",
+        "linkButton": true
+      },
+      {
+        "colClass": "_big",
+        "rows": [
+          {
+            "cols": [
+              {
+                "textContent": "Доступ к сервису",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "-",
+                "colClass": "_date"
+              }
+            ]
+          },
+          {
+            "cols": [
+              {
+                "textContent": "Корпоративные клиенты",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "-",
+                "colClass": "_date"
+              }
+            ]
+          },
+          {
+            "cols": [
+              {
+                "textContent": "Продвижение",
+                "colClass": "_title"
+              },
+              {
+                "textContent": "19.10.2019",
+                "colClass": "_date"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

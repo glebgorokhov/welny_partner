@@ -11,7 +11,7 @@ mixin header()
     .container
       +e.menu
         - var i = 0
-        each item in getData('menu')
+        each item in getData('menu_small')
           - i++
           +e.A.link(href=item.link, class=(i === activeMenuPoint ? 'is-active' : false))!= item.text
 
