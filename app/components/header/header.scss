@@ -10,6 +10,15 @@
 
   $b: &;
 
+  &_no-menu {
+    @include rule(min-height, (xl: 100px, lg: 51px));
+    @include rule(border-bottom, (lg: 0));
+
+    .container {
+      display: none;
+    }
+  }
+
   .container {
     @include rule(padding, (lg: 0));
   }
